@@ -21,7 +21,7 @@ const MovieCard = (props) => {
 
     <div>
     <span>{props.Type}</span>
-    <h3>{props.Title}</h3>
+    <h3 >{props.Title}</h3>
     </div>
   </div>
 {isModalOpen && (
