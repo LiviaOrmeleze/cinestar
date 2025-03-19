@@ -14,4 +14,25 @@ footer {
   footer p ion-icon {
     color: #ff0000;
   }
+  .custom-footer {
+    background-color: #141414; 
+    color: #b3b3b3;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%; 
+    height: auto; 
+    position: fixed; 
+    bottom: 0; 
+    z-index: 1000;
+}
+  .custom-footer a {
+    color: #e50914;
+    text-decoration: none;
+    margin-left: 5px;
+  }
   
+  .custom-footer a:hover {
+    text-decoration: underline;
+  }
+  
+ 
