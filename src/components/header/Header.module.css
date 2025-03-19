@@ -1,17 +1,25 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #56021f !important;
-    color: #ffffff;
-    padding: 10px 20px;
-    width: 30px;
-    height: 60px;
+    width: 100% !important;
+    height: 70px;
+    position: fixed;  
+    top: 0;        
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .text {
-    color: rgba(rgba(255, 255, 255, 0.833));
     justify-content: space-between;
-    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.718);
+    padding: 20px 90px;
+    font-size: 16px;
 }
 
+.perfil {
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+}

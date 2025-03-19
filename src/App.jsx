@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css'
 import Footer from './components/footer/Footer';
 import MovieCard from './components/movieCard/MovieCard';
-import logo from "./assets/devflix.png"
+import perfil from "./assets/kiara.jpg"
 import lupa from "./assets/search.svg"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
@@ -43,9 +43,12 @@ const handleKeyPress= (e) => {
     
     <div id='app'>
 
-      <img className='logo' src={logo} alt="" />
-
-      <Header headerText={'Filmes'} HeaderLink={'./assets/kiara.jpg'}/>
+      <div >
+      <Header 
+      headerText={'Início'}
+      
+      headerPerfil={perfil} />
+      </div>
       
       <div className='search'>
       <input 
