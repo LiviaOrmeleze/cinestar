@@ -22,7 +22,7 @@ const MovieCard = (props) => {
           <img className="object-fit-cover w-75" src={props.Poster} alt="" />
         </div>
 
-        <div className="hoverT border-0">
+        <div className="hoverT">
           <span>{props.Type}</span>
           <h3>{props.Title}</h3>
         </div>
