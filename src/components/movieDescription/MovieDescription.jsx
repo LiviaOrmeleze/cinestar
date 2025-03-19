@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import devFlix from "/favicon.png"
+import cinestar from "../../assets/d.png";
 import styles from "./MovieDescription.module.css";
 
 const MovieDescription = (props) => {
@@ -9,7 +9,7 @@ const MovieDescription = (props) => {
     fetch(`${props.apiUrl}&i=${props.movieID}`)
       .then((response) => response.json())
       .then((data) => setMovieDesc(data))
-      .catch((error)=> console.error(error))
+      .catch((error) => console.error(error));
   }, []);
 
   return (
@@ -17,15 +17,17 @@ const MovieDescription = (props) => {
       <div className={styles.movieModal} onClick={(e) => e.stopPropagation()}>
         <div className={styles.movieInfo}>
           <img
+            className={styles.poster}
             src={movieDesc.Poster}
             alt={`Imagem da capa do filme ${movieDesc.Title}`}
           />
+
+          <img src={cinestar} alt="" className={styles.logoDesc} />
           <button className={styles.btnClose} onClick={props.click}>
             X
           </button>
           <div className={styles.movieType}>
             <div>
-              <img src={devFlix} alt="" />
               {movieDesc.Type}
               <h1>{movieDesc.Title}</h1>
               <a
@@ -34,7 +36,7 @@ const MovieDescription = (props) => {
                 )}`}
                 target="_blank"
               >
-                ▶️ Assistir
+                🎬 Assistir
               </a>
             </div>
           </div>

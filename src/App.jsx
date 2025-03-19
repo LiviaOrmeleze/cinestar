@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css'
 import Footer from './components/footer/Footer';
 import MovieCard from './components/movieCard/MovieCard';
-import logo from "./assets/devflix.png"
+import logo from "./assets/d.png"
 import lupa from "./assets/search.svg"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
@@ -19,7 +19,7 @@ const App = () => {
   
   //Alimentando com dados para não ficar nulo com useEffect
   useEffect(()=> {
-    searchMovies("Barbie")
+    searchMovies("Mamma Mia!")
 }, [])
 
 //criando a conexão com a API e trazendo informações
@@ -62,8 +62,8 @@ const handleKeyPress= (e) => {
     )}
 
       <Footer
-      devName={'LiviaOrmeleze'}
-      devLink={"https://github.com/LiviaOrmeleze"}
+      devName={'CodeGirls'}
+      devLink={"https://amzn.to/4idJ45d"}
       />
     </div>
   )
