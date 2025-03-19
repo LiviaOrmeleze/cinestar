@@ -6,6 +6,7 @@ import logo from "./assets/devflix.png"
 import lupa from "./assets/search.svg"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
+import Header from './components/header/Header';
 
 const App = () => {
 
@@ -38,16 +39,21 @@ const handleKeyPress= (e) => {
 }
 
   return (
+
+    
     <div id='app'>
 
       <img className='logo' src={logo} alt="" />
 
+      <Header headerText={'Filmes'} HeaderLink={'./assets/kiara.jpg'}/>
+      
       <div className='search'>
       <input 
       onKeyDown={handleKeyPress} 
-      onChange={(e)=>setSearch(e.target.value)} type="text" placeholder='Pesquise por filmes' />
+      onChange={(e)=>setSearch(e.target.value)} type="text" placeholder='Pesquisar' />
       <img onClick={() => searchMovies(search)} src={lupa} alt="" />
       </div>
+
 
 
     {movies?.length > 0 ? (
@@ -58,7 +64,7 @@ const handleKeyPress= (e) => {
     ))}
    </div> 
     ) : ( 
-      <h2 className='empty'>😒 Filme não encontrado 😒</h2>
+      <h2 className='empty'>Filme não encontrado😞</h2>
     )}
 
       <Footer
