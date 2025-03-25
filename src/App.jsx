@@ -8,8 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 
 const App = () => {
-  <img src="" alt="" />;
-
+ 
   const [search, setSearch] = useState("");
   const [movies, setMovies] = useState([]);
 
