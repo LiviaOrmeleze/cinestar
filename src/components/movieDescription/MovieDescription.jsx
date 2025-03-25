@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import devFlix from "/favicon.png"
+
 import styles from "./MovieDescription.module.css";
 
 const MovieDescription = (props) => {
