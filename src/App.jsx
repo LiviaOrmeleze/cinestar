@@ -11,8 +11,7 @@ import Search from "./components/search/Search";
 
 
 const App = () => {
-  <img src="" alt="" />;
-
+ 
   const [search, setSearch] = useState("");
   const [movies, setMovies] = useState([]);
 
