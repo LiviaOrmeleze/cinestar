@@ -1,0 +1,12 @@
+.perfil {
+    border-radius: 10px;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    right: 0;
+    top: 11px;  
+    z-index: 1000; 
+    display: flex;
+    margin-right: 35px;
+    align-items: center;
+}
