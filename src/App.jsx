@@ -1,14 +1,11 @@
-import { useEffect, useState } from 'react';
-import './App.css'
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import MovieCard from './components/movieCard/MovieCard';
-import perfil from "./assets/kiara.jpg"
-import lupa from "./assets/lupa2.png"
+import { useEffect, useState } from "react";
+import "./App.css";
+import Footer from "./components/footer/Footer";
+import MovieCard from "./components/movieCard/MovieCard";
+import logo from "./assets/logocinestar.png";
+import lupa from "./assets/search.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
-import Search from "./components/search/Search";
-
 
 const App = () => {
   <img src="" alt="" />;
@@ -35,34 +32,65 @@ const App = () => {
     setMovies(data.Search);
   };
 
-//e = evento| ao clicar ou digitar acontece algo
 
 
   return (
+    <div id="app">
+      <img
+        className="logo object-fit-cover"
+        width={"400px"}
+        height={"150px"}
+        src={logo}
+        alt=""
+      />
 
-    
-    <div id='app'>
+      {/* <div className="search">
+        <input
+          onKeyDown={handleKeyPress}
+          onChange={(e) => setSearch(e.target.value)}
+          type="text"
+          placeholder="Pesquise por filmes"
+        />
+        <img onClick={() => searchMovies(search)} src={lupa} alt="" />
+      </div> */}
 
-      <div className='top-container'>
-      <Search className="p-2"search={search} setSearch={setSearch} searchMovies={searchMovies} lupa={lupa} />
-      <Header 
-      headerPerfil={perfil} />
-      </div>
       
-      
 
+      <h2 className="empty">Top mais assistidos</h2>
 
+      {movies?.length > 0 ? (
+        <div className="overflow-x-auto overflow-y-hidden d-flex flex-nowrap g-4 p-4 w-100 removeScroll">
+          {movies.map((movie, index) => (
+            <MovieCard key={index} apiUrl={apiUrl} {...movie} />
+          ))}
+        </div>
+      ) : (
+        <h2 className="empty">😒 Filme não encontrado 😒</h2>
+      )}
 
-    {movies?.length > 0 ? (
-      <div className="container">
-    {movies.map((movie, index) => (
-      <MovieCard key={index} apiUrl={apiUrl} {...movie} />
-    
-    ))}
-   </div> 
-    ) : ( 
-      <h2 className='empty'>Filme não encontrado😞</h2>
-    )}
+      <h2 className="empty">Romances</h2>
+
+      {movies?.length > 0 ? (
+        <div className="overflow-x-auto overflow-y-hidden d-flex flex-nowrap g-4 p-4 w-100 removeScroll">
+          {movies.map((movie, index) => (
+            <MovieCard key={index} apiUrl={apiUrl} {...movie} />
+          ))}
+        </div>
+      ) : (
+        <h2 className="empty">😒 Filme não encontrado 😒</h2>
+      )}
+
+      <h2 className="empty">Ação</h2>
+
+      {movies?.length > 0 ? (
+        <div className="overflow-x-auto overflow-y-hidden d-flex flex-nowrap g-4 p-4 w-100 removeScroll">
+          {movies.map((movie, index) => (
+            <MovieCard key={index} apiUrl={apiUrl} {...movie} />
+          ))}
+        </div>
+      ) : (
+        <h2 className="empty">😒 Filme não encontrado 😒</h2>
+      )}
 
       <Footer
         devName={"LiviaOrmeleze"}
