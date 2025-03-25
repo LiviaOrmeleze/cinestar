@@ -57,6 +57,8 @@ const App = () => {
         <img onClick={() => searchMovies(search)} src={lupa} alt="" />
       </div> */}
 
+      
+
       <h2 className="empty">Top mais assistidos</h2>
 
       {movies?.length > 0 ? (
