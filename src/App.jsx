@@ -11,29 +11,29 @@ import Search from "./components/search/Search";
 
 
 const App = () => {
+  <img src="" alt="" />;
 
-  const [search,setSearch] = useState("");
-  const [movies,setMovies] = useState([]);
+  const [search, setSearch] = useState("");
+  const [movies, setMovies] = useState([]);
 
   //Utilizando chave de API do arquivo .env
   // const apiKey = import.meta.env.VITE_OMDB_API_KEY
-  const apiKey = "e4d577fa"
-  const apiUrl = `https://omdbapi.com/?apikey=${apiKey}`
-  
+  const apiKey = "e4d577fa";
+  const apiUrl = `https://omdbapi.com/?apikey=${apiKey}`;
+
   //Alimentando com dados para não ficar nulo com useEffect
-  useEffect(()=> {
-    searchMovies("Barbie")
-}, [])
+  useEffect(() => {
+    searchMovies("Barbie");
+  }, []);
 
-//criando a conexão com a API e trazendo informações
-const searchMovies= async (title)=> {
-const response = await fetch(`${apiUrl}&s=${title}&`)
-const data = await response.json()
+  //criando a conexão com a API e trazendo informações
+  const searchMovies = async (title) => {
+    const response = await fetch(`${apiUrl}&s=${title}&`);
+    const data = await response.json();
 
-  //Alimentando o movies
-  setMovies(data.Search)
-
-}
+    //Alimentando o movies
+    setMovies(data.Search);
+  };
 
 //e = evento| ao clicar ou digitar acontece algo
 
@@ -65,12 +65,11 @@ const data = await response.json()
     )}
 
       <Footer
-      devName={'LiviaOrmeleze'}
-      devLink={"https://github.com/LiviaOrmeleze"}
+        devName={"LiviaOrmeleze"}
+        devLink={"https://github.com/LiviaOrmeleze"}
       />
     </div>
-  )
-}
+  );
+};
 
 export default App;
-
