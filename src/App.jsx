@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Footer from "./components/footer/Footer";
 import MovieCard from "./components/movieCard/MovieCard";
-import logo from "./assets/logocine.png";
+import logo from "./assets/logocinestar.png";
 import lupa from "./assets/search.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
