@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import './App.css'
+import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import MovieCard from './components/movieCard/MovieCard';
 import perfil from "./assets/kiara.jpg"
-import lupa from "./assets/search.svg"
+import lupa from "./assets/lupa2.png"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
-import Header from './components/header/Header';
+import Search from "./components/search/Search";
+
 
 const App = () => {
 
@@ -34,28 +36,20 @@ const data = await response.json()
 }
 
 //e = evento| ao clicar ou digitar acontece algo
-const handleKeyPress= (e) => {
-  e.key === "Enter" && searchMovies(search)
-}
+
 
   return (
 
     
     <div id='app'>
 
-      <div >
+      <div className='top-container'>
+      <Search className="p-2"search={search} setSearch={setSearch} searchMovies={searchMovies} lupa={lupa} />
       <Header 
-      headerText={'Início'}
-      
       headerPerfil={perfil} />
       </div>
       
-      <div className='search'>
-      <input 
-      onKeyDown={handleKeyPress} 
-      onChange={(e)=>setSearch(e.target.value)} type="text" placeholder='Pesquisar' />
-      <img onClick={() => searchMovies(search)} src={lupa} alt="" />
-      </div>
+      
 
 
 

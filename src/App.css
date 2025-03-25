@@ -37,16 +37,16 @@ body {
 }
 
 .search {
-  width: 70%;
-  margin: 4rem 0 2rem;
+  width: 300px;
+  margin: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 1.75rem;
-  border-radius: 4rem;
-  background: #1f2123;
-  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  padding: 18px;
+  border-radius: 15px;
+  background: #56021f;
+  border:1px solid #d9d9d9;
+  height: 20px;
 }
 
 .search input {
@@ -54,10 +54,10 @@ body {
   border: none;
   padding-right: 1rem;
   outline: none;
-  color: #a1a1a1;
-  background: #1f2123;
-  font-size: 1.5rem;
-  font-weight: 500;
+  color: #d9d9d9;
+  font-size: 16px;
+  font-weight: 350;
+  background: #56021f;
 }
 
 .search img {
@@ -84,6 +84,20 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+
+.top-container{
+
+    background-color: #56021f !important;
+    width: 100% !important;
+    height: 70px;
+    position: fixed;  
+    top: 0;        
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+
 
 @media screen and (max-width: 600px) {
   .app {
@@ -117,3 +131,4 @@ body {
     margin: 1rem;
   }
 }
+
