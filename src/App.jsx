@@ -44,15 +44,6 @@ const App = () => {
         alt=""
       />
 
-      {/* <div className="search">
-        <input
-          onKeyDown={handleKeyPress}
-          onChange={(e) => setSearch(e.target.value)}
-          type="text"
-          placeholder="Pesquise por filmes"
-        />
-        <img onClick={() => searchMovies(search)} src={lupa} alt="" />
-      </div> */}
 
       
 
