@@ -38,7 +38,7 @@ body {
 
 .search {
   width: 300px;
-  margin: 12px;
+  margin: 13px 110px;
   display: flex;
   align-items: center;
   justify-content: center;

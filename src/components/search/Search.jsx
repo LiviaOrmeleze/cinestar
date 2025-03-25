@@ -6,7 +6,7 @@ const Search = (props) => {
       }
       
   return (
-   <div className='search'  >
+   <div className='search ms-auto '  >
            <img onClick={() => props.searchMovies(props.search)} src={props.lupa} alt="" />
          <input 
          onKeyDown={handleKeyPress} 
