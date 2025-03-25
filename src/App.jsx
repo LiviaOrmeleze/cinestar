@@ -44,7 +44,7 @@ const App = () => {
     <div id='app'>
 
       <div className='top-container'>
-      <Search className="p-2"search={search} setSearch={setSearch} searchMovies={searchMovies} lupa={lupa} />
+      <Search className="p-2" search={search} setSearch={setSearch} searchMovies={searchMovies} lupa={lupa} />
       <Header 
       headerPerfil={perfil} />
       </div>
