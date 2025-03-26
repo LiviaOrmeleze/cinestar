@@ -6,7 +6,7 @@ const MovieDescription = (props) => {
   const [movieDesc, setMovieDesc] = useState([]);
 
   useEffect(() => {
-    fetch(`${props.apiUrl}&i=${props.movieID}`)
+    fetch(`${props.url}&i=${props.movieID}`)
       .then((response) => response.json())
       .then((data) => setMovieDesc(data))
       .catch((error) => console.error(error));
