@@ -26,11 +26,6 @@ body {
 .search {
   width: 300px;
   margin: 13px 110px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-  border-radius: 15px;
   background: #56021f;
   border: 1px solid #d9d9d9;
   height: 20px;
@@ -38,7 +33,6 @@ body {
 
 .search input {
   flex: 1;
-  border: none;
   padding-right: 1rem;
   outline: none;
   color: #d9d9d9;

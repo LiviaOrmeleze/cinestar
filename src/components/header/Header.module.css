@@ -9,4 +9,15 @@
     display: flex;
     margin-right: 35px;
     align-items: center;
+    position: fixed;
 }
+
+/* .perfil {
+    border-radius: 10px;
+    width: 48px;
+    height: 48px;
+    right: 0;
+    top: 11px;  
+    z-index: 1000; 
+    margin-right: 35px;
+} */
