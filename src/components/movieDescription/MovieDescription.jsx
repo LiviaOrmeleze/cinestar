@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import cinestar from "../../assets/d.png";
+import cinestar from "../../assets/cinestar.png";
 import styles from "./MovieDescription.module.css";
 
 const MovieDescription = (props) => {

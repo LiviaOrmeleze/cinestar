@@ -1,10 +1,11 @@
 
 :root {
-  --font-raleway: "Raleway", sans-serif;
-  --color-light-bg: #f0f0f0;
-  --color-light-text: #333;
-  --color-dark-bg: #212426;
-  --color-dark-text: #d9d9d9;
+  --bs-body-bg: #ffffff !important;
+}
+
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #000000 !important;
 }
 
 body.dark {
@@ -21,4 +22,12 @@ body.light {
   cursor: pointer;
   font-size: 2rem;
   margin: 1rem 0;
+}
+
+.search input {
+  font-family: var(--font-raleway);
+}
+
+.container {
+  margin-top: 2rem;
 }
